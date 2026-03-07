@@ -23,6 +23,10 @@
     "CANCEL": "Cancelar",
     "SAVE_SUCCESS": "Usuario actualizado correctamente"
   },
+  "VALIDATION": {
+    "REQUIRED": "Este campo es obligatorio",
+    "EMAIL_INVALID": "Introduce un email válido"
+  },
   "ERROR": {
     "400": "Los datos enviados no son correctos. Por favor, revísalos e inténtalo de nuevo.",
     "401": "Debes iniciar sesión para acceder a esta sección.",

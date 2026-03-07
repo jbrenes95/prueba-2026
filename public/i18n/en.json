@@ -23,6 +23,10 @@
     "CANCEL": "Cancel",
     "SAVE_SUCCESS": "User updated successfully"
   },
+  "VALIDATION": {
+    "REQUIRED": "This field is required",
+    "EMAIL_INVALID": "Enter a valid email"
+  },
   "ERROR": {
     "400": "The submitted data is not valid. Please review it and try again.",
     "401": "You must log in to access this section.",
