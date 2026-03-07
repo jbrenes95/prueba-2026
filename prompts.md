@@ -79,3 +79,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 25
 > La b me parece mejor, ten en cuenta que los mensajes tienen que ser entendibles por el usuario comun
+
+## Prompt 26
+> Antes de seguir quiero que añadamos al proyecto i18n para que nuestros textos pues aparecer tanto en español como en ingles, ahora hay pocos pero quiero que lo tengas en cuenta cuando añadamos mas porque todos nuestros labels tienes que tener los dos idiomas
