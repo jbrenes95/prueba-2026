@@ -17,6 +17,7 @@ export class UsersService {
 
   userDetail = signal<UserDetail | null>(null);
   loadingDetail = signal(false);
+  userDetailError = signal(false);
 
   private http = inject(HttpClient);
   private notification = inject(NotificationService);
@@ -45,6 +46,7 @@ export class UsersService {
   loadUserDetail(id: number): void {
     this.loadingDetail.set(true);
     this.userDetail.set(null);
+    this.userDetailError.set(false);
     this.http
       .get<UserDetailApi>(`${this.apiUrl}/${id}`)
       .pipe(map(mapUserDetail))
@@ -55,6 +57,7 @@ export class UsersService {
         },
         error: () => {
           this.loadingDetail.set(false);
+          this.userDetailError.set(true);
         },
       });
   }

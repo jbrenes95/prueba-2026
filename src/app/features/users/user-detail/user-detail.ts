@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal, effect } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -40,6 +40,15 @@ export class UserDetail implements OnInit {
   editName = signal('');
   editSurname = signal('');
   editEmail = signal('');
+
+  constructor() {
+    effect(() => {
+      if (this.usersService.userDetailError()) {
+        this.usersService.userDetailError.set(false);
+        this.router.navigate(['/users']);
+      }
+    });
+  }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
