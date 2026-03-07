@@ -1,5 +1,37 @@
+.page-toolbar {
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+  padding: 0 1.5rem;
+}
+
+.search-field {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.table-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  padding: 0 !important;
+}
+
+.mat-mdc-header-row {
+  background-color: var(--mat-sys-primary);
+
+  .mat-mdc-header-cell {
+    color: var(--mat-sys-on-primary);
+    font-weight: 600;
+  }
+}
+
 .cursor-pointer {
   cursor: pointer;
+  transition: background-color 0.15s ease;
 
   &:hover {
     background-color: var(--mat-sys-surface-variant);
