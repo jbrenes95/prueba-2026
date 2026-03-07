@@ -88,3 +88,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 28
 > Vamos a poner un boton toggle de angular material de seleccion unica que tenndra dos opciones español e ingles y en funcion de la que este seleccionada se cargara un idioma o otro
+
+## Prompt 29
+> Vamos a usar ngx-translate

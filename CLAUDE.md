@@ -12,6 +12,7 @@ Angular 21 standalone SPA with routing (SCSS). Technical test project.
 - **Routing:** `provideRouter()` in `src/app/app.config.ts`, routes in `src/app/app.routes.ts`
 - **UI Components:** Angular Material (azure-blue theme, Material 3) — use for ALL UI components
 - **Layout/Grid:** Bootstrap (CSS classes only, no JS) — use for layout and spacing only
+- **i18n:** `@ngx-translate/core` v17 + `@ngx-translate/http-loader` v17 — JSON files in `public/i18n/`
 - **Styles:** SCSS — Bootstrap imported in `src/styles.scss`
 - **Testing:** Vitest (`ng test`)
 
@@ -29,6 +30,8 @@ ng generate component <name>   # Scaffold a component
 ```
 src/app/
 ├── core/
+│   ├── components/
+│   │   └── language-toggle/         # MatButtonToggle ES/EN — calls TranslateService.use()
 │   ├── interceptors/
 │   │   └── error.interceptor.ts     # Functional interceptor — catches HTTP errors, shows toast
 │   ├── models/
@@ -51,13 +54,13 @@ Routes use lazy loading via `loadComponent`. Default route redirects to `/users`
 
 ## i18n
 
-Angular native i18n (`@angular/localize`). Source locale: `es`. Translation: `en`.
+`@ngx-translate/core` v17. Default language: `es`. Runtime language switch via `LanguageToggle` component.
 
-- **Templates:** use `i18n="@@id"` attribute on every text element. IDs follow `feature.context` pattern (e.g. `users.col.name`, `error.404`, `common.close`).
-- **TypeScript:** use `$localize`:@@id:texto en español\`` tagged template literals.
-- **Files:** `src/locale/messages.xlf` (source, auto-generated), `src/locale/messages.en.xlf` (English translations).
-- **Adding new text:** add `i18n`/`$localize` first, then run `ng extract-i18n --output-path src/locale` to update `messages.xlf`, then add the `<target>` in `messages.en.xlf`.
-- **Build per locale:** `ng build --configuration=es` / `ng build --configuration=en`
+- **Templates:** `{{ 'KEY.SUBKEY' | translate }}` — import `TranslatePipe` in component `imports`.
+- **TypeScript:** `this.translate.instant('KEY')` — inject `TranslateService`.
+- **Translation files:** `public/i18n/es.json` and `public/i18n/en.json`. Keys follow `FEATURE.CONTEXT` pattern (e.g. `USERS.COL.NAME`, `ERROR.404`, `COMMON.CLOSE`).
+- **Adding new text:** add key to both JSON files simultaneously.
+- **Language toggle:** `<app-language-toggle />` — import `LanguageToggle` in component `imports`.
 
 ## Coding Conventions
 
