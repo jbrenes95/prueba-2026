@@ -69,3 +69,7 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 22
 > La opcion a me gusta mas
+
+## Prompt 23
+> quiero que me poengas el input de buscar encima de la tabla y que ocupe el mismo ancho de la tabla
+> (corrección) Esta bien pero lo quiero fuera de la card
