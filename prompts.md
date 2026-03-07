@@ -82,3 +82,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 26
 > Antes de seguir quiero que añadamos al proyecto i18n para que nuestros textos pues aparecer tanto en español como en ingles, ahora hay pocos pero quiero que lo tengas en cuenta cuando añadamos mas porque todos nuestros labels tienes que tener los dos idiomas
+
+## Prompt 27
+> La opcion a siempre cogeremos la opcion mas nativa

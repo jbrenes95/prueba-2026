@@ -49,6 +49,16 @@ Routes use lazy loading via `loadComponent`. Default route redirects to `/users`
 
 `core/` is shared across all features. Models define API shapes (back) and frontend models separately. Mappers strip sensitive fields (e.g. `password` never reaches the frontend model).
 
+## i18n
+
+Angular native i18n (`@angular/localize`). Source locale: `es`. Translation: `en`.
+
+- **Templates:** use `i18n="@@id"` attribute on every text element. IDs follow `feature.context` pattern (e.g. `users.col.name`, `error.404`, `common.close`).
+- **TypeScript:** use `$localize`:@@id:texto en español\`` tagged template literals.
+- **Files:** `src/locale/messages.xlf` (source, auto-generated), `src/locale/messages.en.xlf` (English translations).
+- **Adding new text:** add `i18n`/`$localize` first, then run `ng extract-i18n --output-path src/locale` to update `messages.xlf`, then add the `<target>` in `messages.en.xlf`.
+- **Build per locale:** `ng build --configuration=es` / `ng build --configuration=en`
+
 ## Coding Conventions
 
 - Always use `inject()` for dependency injection — never constructor injection.
