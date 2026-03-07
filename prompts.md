@@ -136,3 +136,9 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 44
 > Me estas guardando los promts y el contexto como hablamos antes
+
+## Prompt 45
+> No crees que seria buena idea que el app-language-toggle al app para no tener que importarlo muchas veces y que no se tenga que renderizar mas veces como lo ves
+
+## Prompt 46
+> a

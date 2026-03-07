@@ -1,7 +1,6 @@
 import { Component, OnInit, inject, signal, effect } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +9,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TranslatePipe } from '@ngx-translate/core';
 import { UsersService } from '../services/users.service';
-import { LanguageToggle } from '../../../core/components/language-toggle/language-toggle';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -18,7 +16,6 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   selector: 'app-user-detail',
   imports: [
     ReactiveFormsModule,
-    MatToolbarModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
@@ -26,7 +23,6 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     MatFormFieldModule,
     MatProgressSpinnerModule,
     TranslatePipe,
-    LanguageToggle,
   ],
   templateUrl: './user-detail.html',
   styleUrl: './user-detail.scss',

@@ -3,14 +3,12 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
 import { UsersService } from '../services/users.service';
-import { LanguageToggle } from '../../../core/components/language-toggle/language-toggle';
 
 @Component({
   selector: 'app-user-list',
@@ -18,13 +16,11 @@ import { LanguageToggle } from '../../../core/components/language-toggle/languag
     FormsModule,
     MatTableModule,
     MatProgressSpinnerModule,
-    MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     TranslatePipe,
-    LanguageToggle,
   ],
   templateUrl: './user-list.html',
   styleUrl: './user-list.scss',
