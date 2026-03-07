@@ -48,3 +48,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 15
 > opcion a
+
+## Prompt 16
+> Deprecation [plugin angular-sass]
