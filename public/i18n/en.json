@@ -1,0 +1,26 @@
+{
+  "COMMON": {
+    "CLOSE": "Close"
+  },
+  "USERS": {
+    "TITLE": "Users",
+    "SEARCH": "Search",
+    "COL": {
+      "ID": "#",
+      "NAME": "Name",
+      "SURNAME": "Surname",
+      "EMAIL": "Email"
+    }
+  },
+  "ERROR": {
+    "400": "The submitted data is not valid. Please review it and try again.",
+    "401": "You must log in to access this section.",
+    "403": "You do not have permission to perform this action.",
+    "404": "The information you were looking for could not be found.",
+    "408": "The connection took too long. Please try again.",
+    "500": "A server error has occurred. We are working to fix it.",
+    "502": "The server is not responding correctly. Please try again later.",
+    "503": "The service is currently unavailable. Please try again later.",
+    "DEFAULT": "An unexpected error has occurred. Please try again."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "COMMON": {
+    "CLOSE": "Cerrar"
+  },
+  "USERS": {
+    "TITLE": "Usuarios",
+    "SEARCH": "Buscar",
+    "COL": {
+      "ID": "#",
+      "NAME": "Nombre",
+      "SURNAME": "Apellido",
+      "EMAIL": "Email"
+    }
+  },
+  "ERROR": {
+    "400": "Los datos enviados no son correctos. Por favor, revísalos e inténtalo de nuevo.",
+    "401": "Debes iniciar sesión para acceder a esta sección.",
+    "403": "No tienes permisos para realizar esta acción.",
+    "404": "No se encontró la información que buscabas.",
+    "408": "La conexión tardó demasiado. Por favor, inténtalo de nuevo.",
+    "500": "Ha ocurrido un problema en el servidor. Estamos trabajando para solucionarlo.",
+    "502": "El servidor no está respondiendo correctamente. Inténtalo más tarde.",
+    "503": "El servicio no está disponible en este momento. Inténtalo más tarde.",
+    "DEFAULT": "Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo."
+  }
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" target-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="error.400" datatype="html">
+        <source>Los datos enviados no son correctos. Por favor, revísalos e inténtalo de nuevo.</source>
+        <target>The submitted data is not valid. Please review it and try again.</target>
+      </trans-unit>
+      <trans-unit id="error.401" datatype="html">
+        <source>Debes iniciar sesión para acceder a esta sección.</source>
+        <target>You must log in to access this section.</target>
+      </trans-unit>
+      <trans-unit id="error.403" datatype="html">
+        <source>No tienes permisos para realizar esta acción.</source>
+        <target>You do not have permission to perform this action.</target>
+      </trans-unit>
+      <trans-unit id="error.404" datatype="html">
+        <source>No se encontró la información que buscabas.</source>
+        <target>The information you were looking for could not be found.</target>
+      </trans-unit>
+      <trans-unit id="error.408" datatype="html">
+        <source>La conexión tardó demasiado. Por favor, inténtalo de nuevo.</source>
+        <target>The connection took too long. Please try again.</target>
+      </trans-unit>
+      <trans-unit id="error.500" datatype="html">
+        <source>Ha ocurrido un problema en el servidor. Estamos trabajando para solucionarlo.</source>
+        <target>A server error has occurred. We are working to fix it.</target>
+      </trans-unit>
+      <trans-unit id="error.502" datatype="html">
+        <source>El servidor no está respondiendo correctamente. Inténtalo más tarde.</source>
+        <target>The server is not responding correctly. Please try again later.</target>
+      </trans-unit>
+      <trans-unit id="error.503" datatype="html">
+        <source>El servicio no está disponible en este momento. Inténtalo más tarde.</source>
+        <target>The service is currently unavailable. Please try again later.</target>
+      </trans-unit>
+      <trans-unit id="error.default" datatype="html">
+        <source>Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo.</source>
+        <target>An unexpected error has occurred. Please try again.</target>
+      </trans-unit>
+      <trans-unit id="common.close" datatype="html">
+        <source>Cerrar</source>
+        <target>Close</target>
+      </trans-unit>
+      <trans-unit id="users.title" datatype="html">
+        <source>Usuarios</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="users.search" datatype="html">
+        <source>Buscar</source>
+        <target>Search</target>
+      </trans-unit>
+      <trans-unit id="users.col.id" datatype="html">
+        <source>#</source>
+        <target>#</target>
+      </trans-unit>
+      <trans-unit id="users.col.name" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="users.col.surname" datatype="html">
+        <source>Apellido</source>
+        <target>Surname</target>
+      </trans-unit>
+      <trans-unit id="users.col.email" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
