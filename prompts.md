@@ -63,3 +63,9 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 20
 > en la lista de usuario quita el titulo de arriba y pon la cabecera de otro color
+
+## Prompt 21
+> Quiero un estilo moderno usando angular material y que sea responsive
+
+## Prompt 22
+> La opcion a me gusta mas
