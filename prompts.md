@@ -91,3 +91,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 29
 > Vamos a usar ngx-translate
+
+## Prompt 30
+> Quiero que cuando entres en la aplicacion el idioma por defecto sea en español

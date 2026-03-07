@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="error.400" datatype="html">
+        <source>Los datos enviados no son correctos. Por favor, revísalos e inténtalo de nuevo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.401" datatype="html">
+        <source>Debes iniciar sesión para acceder a esta sección.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.403" datatype="html">
+        <source>No tienes permisos para realizar esta acción.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.404" datatype="html">
+        <source>No se encontró la información que buscabas.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.408" datatype="html">
+        <source>La conexión tardó demasiado. Por favor, inténtalo de nuevo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.500" datatype="html">
+        <source>Ha ocurrido un problema en el servidor. Estamos trabajando para solucionarlo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.502" datatype="html">
+        <source>El servidor no está respondiendo correctamente. Inténtalo más tarde.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.503" datatype="html">
+        <source>El servicio no está disponible en este momento. Inténtalo más tarde.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.default" datatype="html">
+        <source>Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.close" datatype="html">
+        <source>Cerrar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/services/notification.service.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.title" datatype="html">
+        <source>Usuarios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/users/user-list/user-list.html</context>
+          <context context-type="linenumber">2,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.search" datatype="html">
+        <source>Buscar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/users/user-list/user-list.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.col.id" datatype="html">
+        <source>#</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/users/user-list/user-list.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.col.name" datatype="html">
+        <source>Nombre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/users/user-list/user-list.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.col.surname" datatype="html">
+        <source>Apellido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/users/user-list/user-list.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.col.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/users/user-list/user-list.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
