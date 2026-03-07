@@ -29,10 +29,14 @@ ng generate component <name>   # Scaffold a component
 ```
 src/app/
 ├── core/
+│   ├── interceptors/
+│   │   └── error.interceptor.ts     # Functional interceptor — catches HTTP errors, shows toast
 │   ├── models/
-│   │   └── user.model.ts     # UserApi, UserDetailApi (back shapes) + User (front model, no password)
-│   └── mappers/
-│       └── user.mapper.ts    # mapUser(UserApi): User  /  mapUserDetail(UserDetailApi): User
+│   │   └── user.model.ts            # UserApi, UserDetailApi (back) + User (front, no password)
+│   ├── mappers/
+│   │   └── user.mapper.ts           # mapUser() / mapUserDetail()
+│   └── services/
+│       └── notification.service.ts  # Wraps MatSnackBar — use for all user-facing toasts
 └── features/
     └── users/
         ├── services/

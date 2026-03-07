@@ -76,3 +76,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 24
 > Ahora quiero que creemos un interceptor para controlar los codigo de error que me manda el back y quiero que cuando venga un error me muestres un toast con un mensaje de error
+
+## Prompt 25
+> La b me parece mejor, ten en cuenta que los mensajes tienen que ser entendibles por el usuario comun
