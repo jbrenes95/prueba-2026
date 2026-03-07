@@ -9,7 +9,7 @@ export class NotificationService {
 
   error(message: string): void {
     this.snackBar.open(message, this.translate.instant('COMMON.CLOSE'), {
-      duration: 5000,
+      duration: 2000,
       panelClass: ['snack-error'],
       horizontalPosition: 'end',
       verticalPosition: 'top',
@@ -18,7 +18,7 @@ export class NotificationService {
 
   success(message: string): void {
     this.snackBar.open(message, this.translate.instant('COMMON.CLOSE'), {
-      duration: 3000,
+      duration: 2000,
       panelClass: ['snack-success'],
       horizontalPosition: 'end',
       verticalPosition: 'top',
