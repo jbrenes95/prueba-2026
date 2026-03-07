@@ -1,0 +1,61 @@
+.page-toolbar {
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+  padding: 0 1.5rem;
+}
+
+.detail-card {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.field-label {
+  width: 130px;
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--mat-sys-on-surface-variant);
+  font-size: 0.875rem;
+}
+
+.field-value {
+  flex: 1;
+  color: var(--mat-sys-on-surface);
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.eye-btn {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}

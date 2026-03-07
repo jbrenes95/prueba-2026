@@ -1,1 +1,83 @@
-<p>user-detail works!</p>
+<mat-toolbar class="page-toolbar">
+  <span class="spacer"></span>
+  <app-language-toggle />
+</mat-toolbar>
+
+<div class="container py-4">
+  @if (usersService.loadingDetail()) {
+    <div class="d-flex justify-content-center py-5">
+      <mat-spinner />
+    </div>
+  }
+
+  @if (usersService.userDetail(); as user) {
+    <mat-card class="detail-card">
+      <mat-card-content class="p-4">
+
+        @if (!isEditing()) {
+          <div class="field-row">
+            <span class="field-label">{{ 'USER_DETAIL.NAME' | translate }}</span>
+            <span class="field-value">{{ user.name }}</span>
+          </div>
+          <div class="field-row">
+            <span class="field-label">{{ 'USER_DETAIL.SURNAME' | translate }}</span>
+            <span class="field-value">{{ user.surname }}</span>
+          </div>
+          <div class="field-row">
+            <span class="field-label">{{ 'USER_DETAIL.EMAIL' | translate }}</span>
+            <span class="field-value">{{ user.email }}</span>
+          </div>
+          <div class="field-row">
+            <span class="field-label">{{ 'USER_DETAIL.PASSWORD' | translate }}</span>
+            <span class="field-value password-field">
+              {{ showPassword() ? user.password : '••••••••' }}
+              <button mat-icon-button (click)="showPassword.set(!showPassword())" class="eye-btn">
+                <mat-icon>{{ showPassword() ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+            </span>
+          </div>
+        }
+
+        @if (isEditing()) {
+          <mat-form-field appearance="outline" class="w-100 mb-2">
+            <mat-label>{{ 'USER_DETAIL.NAME' | translate }}</mat-label>
+            <input matInput [ngModel]="editName()" (ngModelChange)="editName.set($event)" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100 mb-2">
+            <mat-label>{{ 'USER_DETAIL.SURNAME' | translate }}</mat-label>
+            <input matInput [ngModel]="editSurname()" (ngModelChange)="editSurname.set($event)" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100 mb-2">
+            <mat-label>{{ 'USER_DETAIL.EMAIL' | translate }}</mat-label>
+            <input matInput [ngModel]="editEmail()" (ngModelChange)="editEmail.set($event)" />
+          </mat-form-field>
+        }
+
+        <div class="actions">
+          <button mat-stroked-button (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>
+            {{ 'USER_DETAIL.BACK' | translate }}
+          </button>
+
+          @if (!isEditing()) {
+            <button mat-flat-button (click)="startEdit()">
+              <mat-icon>edit</mat-icon>
+              {{ 'USER_DETAIL.EDIT' | translate }}
+            </button>
+          }
+
+          @if (isEditing()) {
+            <button mat-stroked-button (click)="cancelEdit()">
+              {{ 'USER_DETAIL.CANCEL' | translate }}
+            </button>
+            <button mat-flat-button (click)="saveEdit()">
+              <mat-icon>save</mat-icon>
+              {{ 'USER_DETAIL.SAVE' | translate }}
+            </button>
+          }
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  }
+</div>
