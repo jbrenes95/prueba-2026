@@ -97,3 +97,42 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 31
 > Quiero que el button toggle este pegado a la izquierda del contenedor
+
+## Prompt 32
+> Eso esta mal, quiero que en el mat-toolbar, quitel el titulo usuarios y que el button toggle este a esa altura pegado a la izquierda
+
+## Prompt 33
+> Quiero que el toogle buton este pegado a la derecha
+
+## Prompt 34
+> En la tabla de usuarios deberiamos quitar la columna id, ya que un usuario externo no deberia saber las id de usuario
+
+## Prompt 35
+> Quiero que en la peticion en la que te traes los users de base de datos primero compruebes si ya los tenemos en la signal asi ahorramos hacer peticiones inecesarias
+
+## Prompt 36
+> user-detail no crees que deberia ser una ruta hija de user-list?
+
+## Prompt 37
+> Nos quedamos como estamos
+
+## Prompt 38
+> Vamos a crear la vista en detalle (el componente ya esta hecho), donde queremos mostrar nombre, apellido, email y contraseña que estara oculta y tendra un icono de un ojo que cuando se pulse se mostrara, tendra dos botones uno para volver y otro que podra Editar tirando de esta url
+
+## Prompt 39
+> Cuando la peticion de editar usuarios devuelva un estado correcto queremos que busques la id de ese usuario en nuestro estado y actualices localmente ese usuario para que se vea reflejado en la lista
+
+## Prompt 40
+> No quiero que me actualices con el usuario de base de datos quiero que me busques el usuario en la lista y me actualices con los cambios del formulario
+
+## Prompt 41
+> Quiero que cuando se navege a un usuario que no existe automaticamente me redirijas a la lista otra vez
+
+## Prompt 42
+> La nueva feature va ser primero añadir validaciones para el campo email tanto de forms como una regex basica para comprobar que siempre lleve un @ y un punto minimo y para la contraseña que sea required
+
+## Prompt 43
+> vamos a dejar un poco de margen top entre los input de edicion del usuario detalle para que se vean mejor los mensajes de error
+
+## Prompt 44
+> Me estas guardando los promts y el contexto como hablamos antes

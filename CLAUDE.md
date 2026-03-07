@@ -35,7 +35,7 @@ src/app/
 │   ├── interceptors/
 │   │   └── error.interceptor.ts     # Functional interceptor — catches HTTP errors, shows toast
 │   ├── models/
-│   │   └── user.model.ts            # UserApi, UserDetailApi (back) + User (front, no password)
+│   │   └── user.model.ts            # UserApi, UserDetailApi (back) + User, UserDetail (front)
 │   ├── mappers/
 │   │   └── user.mapper.ts           # mapUser() / mapUserDetail()
 │   └── services/
@@ -50,7 +50,7 @@ src/app/
 
 Routes use lazy loading via `loadComponent`. Default route redirects to `/users`.
 
-`core/` is shared across all features. Models define API shapes (back) and frontend models separately. Mappers strip sensitive fields (e.g. `password` never reaches the frontend model).
+`core/` is shared across all features. Models define API shapes (back) and frontend models separately — `password` is excluded from `User` (list) but included in `UserDetail` (detail view only).
 
 ## i18n
 
@@ -58,7 +58,7 @@ Routes use lazy loading via `loadComponent`. Default route redirects to `/users`
 
 - **Templates:** `{{ 'KEY.SUBKEY' | translate }}` — import `TranslatePipe` in component `imports`.
 - **TypeScript:** `this.translate.instant('KEY')` — inject `TranslateService`.
-- **Translation files:** `public/i18n/es.json` and `public/i18n/en.json`. Keys follow `FEATURE.CONTEXT` pattern (e.g. `USERS.COL.NAME`, `ERROR.404`, `COMMON.CLOSE`).
+- **Translation files:** `public/i18n/es.json` and `public/i18n/en.json`. Keys follow `FEATURE.CONTEXT` pattern (e.g. `USERS.COL.NAME`, `ERROR.404`, `COMMON.CLOSE`, `VALIDATION.REQUIRED`).
 - **Adding new text:** add key to both JSON files simultaneously.
 - **Language toggle:** `<app-language-toggle />` — import `LanguageToggle` in component `imports`.
 
@@ -66,10 +66,16 @@ Routes use lazy loading via `loadComponent`. Default route redirects to `/users`
 
 - Always use `inject()` for dependency injection — never constructor injection.
 - API base URL lives in `src/environments/environment.ts` (`environment.apiUrl`). Services compose endpoint URLs from it.
+- Forms with validation use `ReactiveFormsModule` + `FormBuilder` via `inject()`.
+- Use `effect()` in constructor (not `ngOnInit`) to react to signal changes and trigger side effects like navigation.
 
 ## State Pattern
 
-`UsersService` uses Angular Signals (`signal<User[]>`, `signal<boolean>`, `signal<string|null>`). Components call `loadUsers()` on init and read state via signals. No NgRx.
+`UsersService` uses Angular Signals (`signal<User[]>`, `signal<boolean>`, `signal<string|null>`). Components call `loadUsers()` / `loadUserDetail()` on init and read state via signals. `loadUsers()` is cached — skips HTTP if `users()` already has data. No NgRx.
+
+Signals exposed by `UsersService`:
+- `users`, `loading`, `error` — list state
+- `userDetail`, `loadingDetail`, `userDetailError` — detail state
 
 ## Repository
 
