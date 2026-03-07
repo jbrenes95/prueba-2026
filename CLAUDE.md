@@ -4,7 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a technical test project (`prueba-tecnica-2026`). The project is in its initial setup phase.
+Angular 21 standalone SPA with routing (SCSS). Technical test project.
+
+## Tech Stack
+
+- **Framework:** Angular 21 (standalone components, no NgModules)
+- **Routing:** `provideRouter()` in `src/app/app.config.ts`, routes in `src/app/app.routes.ts`
+- **Styles:** SCSS
+- **Testing:** Vitest (`ng test`)
+
+## Commands
+
+```bash
+ng serve        # Dev server at http://localhost:4200
+ng build        # Production build → dist/
+ng test         # Unit tests (Vitest)
+ng generate component <name>   # Scaffold a component
+```
 
 ## Repository
 
