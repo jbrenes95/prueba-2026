@@ -54,3 +54,9 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 17
 > Siempre que tenngas que inyectar algo usa la inject(), la url la vamos a sacar al archivo de enviroments para separarlo del servicio
+
+## Prompt 18
+> En servicio quuiero que mapes los datos cuando entran para separa logica de back y que usamos en el front
+
+## Prompt 19
+> La opcion b me gusta mas y quiero que los modelos y los mapper esten separados de los componentes por si se llamaran desde mas modulos en el futuro, tambien tenemos que tener en cuanta que el user details viene con un parametro extra que la contraseña

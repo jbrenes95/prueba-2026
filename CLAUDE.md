@@ -28,17 +28,22 @@ ng generate component <name>   # Scaffold a component
 
 ```
 src/app/
+├── core/
+│   ├── models/
+│   │   └── user.model.ts     # UserApi, UserDetailApi (back shapes) + User (front model, no password)
+│   └── mappers/
+│       └── user.mapper.ts    # mapUser(UserApi): User  /  mapUserDetail(UserDetailApi): User
 └── features/
     └── users/
-        ├── models/
-        │   └── user.model.ts       # User interface: { id, name, surname, email }
         ├── services/
-        │   └── users.service.ts    # Signals: users(), loading(), error() + loadUsers()
+        │   └── users.service.ts    # Signals + HTTP, applies mapper on incoming data
         ├── user-list/              # /users — tabla de usuarios con Material
         └── user-detail/            # /users/:id — detalle de un usuario
 ```
 
 Routes use lazy loading via `loadComponent`. Default route redirects to `/users`.
+
+`core/` is shared across all features. Models define API shapes (back) and frontend models separately. Mappers strip sensitive fields (e.g. `password` never reaches the frontend model).
 
 ## Coding Conventions
 
