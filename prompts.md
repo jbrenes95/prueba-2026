@@ -21,3 +21,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 6
 > Los unicos archivos que si te dejo subir siempre son el claude.md y prompts
+
+## Prompt 7
+> Vamos a empezar instalando angualar cli e iniciando un nuevo proyecto de angular en el que vamos a usar rutas
