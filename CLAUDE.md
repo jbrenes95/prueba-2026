@@ -40,6 +40,11 @@ src/app/
 
 Routes use lazy loading via `loadComponent`. Default route redirects to `/users`.
 
+## Coding Conventions
+
+- Always use `inject()` for dependency injection — never constructor injection.
+- API base URL lives in `src/environments/environment.ts` (`environment.apiUrl`). Services compose endpoint URLs from it.
+
 ## State Pattern
 
 `UsersService` uses Angular Signals (`signal<User[]>`, `signal<boolean>`, `signal<string|null>`). Components call `loadUsers()` on init and read state via signals. No NgRx.

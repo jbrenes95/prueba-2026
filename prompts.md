@@ -51,3 +51,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 16
 > Deprecation [plugin angular-sass]
+
+## Prompt 17
+> Siempre que tenngas que inyectar algo usa la inject(), la url la vamos a sacar al archivo de enviroments para separarlo del servicio
