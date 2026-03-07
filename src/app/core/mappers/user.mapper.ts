@@ -1,4 +1,4 @@
-import { User, UserApi, UserDetailApi } from '../models/user.model';
+import { User, UserApi, UserDetail, UserDetailApi } from '../models/user.model';
 
 export function mapUser(api: UserApi): User {
   return {
@@ -9,6 +9,9 @@ export function mapUser(api: UserApi): User {
   };
 }
 
-export function mapUserDetail(api: UserDetailApi): User {
-  return mapUser(api);
+export function mapUserDetail(api: UserDetailApi): UserDetail {
+  return {
+    ...mapUser(api),
+    password: api.password,
+  };
 }
