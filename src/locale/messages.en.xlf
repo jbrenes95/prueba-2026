@@ -50,10 +50,6 @@
         <source>Buscar</source>
         <target>Search</target>
       </trans-unit>
-      <trans-unit id="users.col.id" datatype="html">
-        <source>#</source>
-        <target>#</target>
-      </trans-unit>
       <trans-unit id="users.col.name" datatype="html">
         <source>Nombre</source>
         <target>Name</target>

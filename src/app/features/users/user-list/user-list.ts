@@ -33,16 +33,6 @@ export class UserList implements OnInit {
   displayedColumns = ['name', 'surname', 'email'];
   searchTerm = signal('');
 
-  filteredUsers = computed(() => {
-    const term = this.searchTerm().toLowerCase();
-    if (!term) return this.usersService.users();
-    return this.usersService.users().filter(u =>
-      u.name.toLowerCase().includes(term) ||
-      u.surname.toLowerCase().includes(term) ||
-      u.email.toLowerCase().includes(term)
-    );
-  });
-
   usersService = inject(UsersService);
   private router = inject(Router);
 
@@ -53,4 +43,17 @@ export class UserList implements OnInit {
   goToDetail(id: number): void {
     this.router.navigate(['/users', id]);
   }
+
+  filteredUsers = computed(() => {
+    const term = this.searchTerm().toLowerCase();
+    if (!term) return this.usersService.users();
+    return this.usersService
+      .users()
+      .filter(
+        (u) =>
+          u.name.toLowerCase().includes(term) ||
+          u.surname.toLowerCase().includes(term) ||
+          u.email.toLowerCase().includes(term),
+      );
+  });
 }

@@ -16,6 +16,8 @@ export class UsersService {
   private http = inject(HttpClient);
 
   loadUsers(): void {
+    if (this.users().length > 0) return;
+
     this.loading.set(true);
     this.error.set(null);
     this.http.get<UserApi[]>(this.apiUrl).pipe(
