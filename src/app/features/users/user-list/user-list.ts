@@ -30,7 +30,7 @@ import { LanguageToggle } from '../../../core/components/language-toggle/languag
   styleUrl: './user-list.scss',
 })
 export class UserList implements OnInit {
-  displayedColumns = ['id', 'name', 'surname', 'email'];
+  displayedColumns = ['name', 'surname', 'email'];
   searchTerm = signal('');
 
   filteredUsers = computed(() => {

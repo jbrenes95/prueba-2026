@@ -94,3 +94,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 30
 > Quiero que cuando entres en la aplicacion el idioma por defecto sea en español
+
+## Prompt 31
+> Quiero que el button toggle este pegado a la izquierda del contenedor
