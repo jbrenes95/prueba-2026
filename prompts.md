@@ -142,3 +142,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 46
 > a
+
+## Prompt 47
+> Vamos a implementar un cambio quiero que cuando se edite un usuario se haga la peticion y si la peticion es correcta quiero que actualices el usuario en el listado

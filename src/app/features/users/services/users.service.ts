@@ -67,6 +67,7 @@ export class UsersService {
       next: (response) => {
         if (response) {
           this.userDetail.update((current) => (current ? { ...current, ...data } : current));
+          this.users.update((list) => list.map((u) => (u.id === id ? { ...u, ...data } : u)));
           this.notification.success(this.translate.instant('USER_DETAIL.SAVE_SUCCESS'));
         }
       },
