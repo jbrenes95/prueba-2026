@@ -30,11 +30,19 @@ ng generate component <name>   # Scaffold a component
 src/app/
 └── features/
     └── users/
-        ├── user-list/    # /users — lista de usuarios
-        └── user-detail/  # /users/:id — detalle de un usuario
+        ├── models/
+        │   └── user.model.ts       # User interface: { id, name, surname, email }
+        ├── services/
+        │   └── users.service.ts    # Signals: users(), loading(), error() + loadUsers()
+        ├── user-list/              # /users — tabla de usuarios con Material
+        └── user-detail/            # /users/:id — detalle de un usuario
 ```
 
 Routes use lazy loading via `loadComponent`. Default route redirects to `/users`.
+
+## State Pattern
+
+`UsersService` uses Angular Signals (`signal<User[]>`, `signal<boolean>`, `signal<string|null>`). Components call `loadUsers()` on init and read state via signals. No NgRx.
 
 ## Repository
 

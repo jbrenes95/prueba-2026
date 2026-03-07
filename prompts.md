@@ -42,3 +42,9 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 13
 > la opcion a
+
+## Prompt 14
+> Pues vamos a hacver que userlist sea nuestra punto de entrada, vamos usar el router, vamos hacer una llamada a esta url:https://80133108-6736-44d8-8add-ee36ffe64a38.mock.pstmn.io/api/v1/users traer los usuarios, guardarlo en un estado, y mostrarlos en la vista usando una tabla de angular material
+
+## Prompt 15
+> opcion a
