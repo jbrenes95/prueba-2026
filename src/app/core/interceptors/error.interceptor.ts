@@ -10,10 +10,13 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
+      const backendMessage = error.error?.message;
       const key = `ERROR.${error.status}`;
-      const message = translate.instant(key) !== key
-        ? translate.instant(key)
-        : translate.instant('ERROR.DEFAULT');
+      const message = backendMessage
+        ? backendMessage
+        : translate.instant(key) !== key
+          ? translate.instant(key)
+          : translate.instant('ERROR.DEFAULT');
       notification.error(message);
       return throwError(() => error);
     })
