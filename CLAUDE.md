@@ -10,7 +10,9 @@ Angular 21 standalone SPA with routing (SCSS). Technical test project.
 
 - **Framework:** Angular 21 (standalone components, no NgModules)
 - **Routing:** `provideRouter()` in `src/app/app.config.ts`, routes in `src/app/app.routes.ts`
-- **Styles:** SCSS
+- **UI Components:** Angular Material (azure-blue theme, Material 3) — use for ALL UI components
+- **Layout/Grid:** Bootstrap (CSS classes only, no JS) — use for layout and spacing only
+- **Styles:** SCSS — Bootstrap imported in `src/styles.scss`
 - **Testing:** Vitest (`ng test`)
 
 ## Commands
