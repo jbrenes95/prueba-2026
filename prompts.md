@@ -24,3 +24,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 7
 > Vamos a empezar instalando angualar cli e iniciando un nuevo proyecto de angular en el que vamos a usar rutas
+
+## Prompt 8
+> La opcion a
