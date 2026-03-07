@@ -30,3 +30,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 9
 > Ahora vamos a instalar dos dependencias. 1. Angular material del que apartir de ahora vamos a usar sacar todos los componentes que necesitemos para la app y 2. boostrap que solo usareamos sus clases para maquetar la app
+
+## Prompt 10
+> Usa la a
