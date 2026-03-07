@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, signal, effect } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,10 +12,12 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { UsersService } from '../services/users.service';
 import { LanguageToggle } from '../../../core/components/language-toggle/language-toggle';
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 @Component({
   selector: 'app-user-detail',
   imports: [
-    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
@@ -32,14 +34,18 @@ import { LanguageToggle } from '../../../core/components/language-toggle/languag
 export class UserDetail implements OnInit {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
+  private fb = inject(FormBuilder);
   usersService = inject(UsersService);
 
   showPassword = signal(false);
   isEditing = signal(false);
 
-  editName = signal('');
-  editSurname = signal('');
-  editEmail = signal('');
+  editForm = this.fb.group({
+    name: [''],
+    surname: [''],
+    email: ['', [Validators.required, Validators.pattern(EMAIL_PATTERN)]],
+    password: ['', Validators.required],
+  });
 
   constructor() {
     effect(() => {
@@ -62,9 +68,12 @@ export class UserDetail implements OnInit {
   startEdit(): void {
     const user = this.usersService.userDetail();
     if (!user) return;
-    this.editName.set(user.name);
-    this.editSurname.set(user.surname);
-    this.editEmail.set(user.email);
+    this.editForm.setValue({
+      name: user.name,
+      surname: user.surname,
+      email: user.email,
+      password: user.password,
+    });
     this.isEditing.set(true);
   }
 
@@ -73,13 +82,11 @@ export class UserDetail implements OnInit {
   }
 
   saveEdit(): void {
+    if (this.editForm.invalid) return;
     const user = this.usersService.userDetail();
     if (!user) return;
-    this.usersService.updateUser(user.id, {
-      name: this.editName(),
-      surname: this.editSurname(),
-      email: this.editEmail(),
-    });
+    const { name, surname, email } = this.editForm.getRawValue();
+    this.usersService.updateUser(user.id, { name: name!, surname: surname!, email: email! });
     this.isEditing.set(false);
   }
 }
