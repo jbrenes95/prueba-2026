@@ -60,3 +60,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 19
 > La opcion b me gusta mas y quiero que los modelos y los mapper esten separados de los componentes por si se llamaran desde mas modulos en el futuro, tambien tenemos que tener en cuanta que el user details viene con un parametro extra que la contraseña
+
+## Prompt 20
+> en la lista de usuario quita el titulo de arriba y pon la cabecera de otro color
