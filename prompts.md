@@ -12,3 +12,12 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 3
 > Vamos a crear una prueba tecnica para una empres asi que lo primero de todo es vamos a darte contexto, quiero que tus archivos de contexto me los subas al repo, quiero que vayas guardando en un archivo todos los prompts que te vaya pidiendo porque son necesarios para la prueba
+
+## Prompt 4
+> Recuerda subir tambien tus archivos de contexto e ir actualizando si se agraga
+
+## Prompt 5
+> Ahora te voy dar nuestra manera de trabajar de aqui en adelante, no quiero que me hagas auto commit a las rama, nuestro flujo va a ser yo te voy a lanzar una feature, me lanzas propuestas, yo elijo la que crea mejor. yo elegire si hago commit
+
+## Prompt 6
+> Los unicos archivos que si te dejo subir siempre son el claude.md y prompts
