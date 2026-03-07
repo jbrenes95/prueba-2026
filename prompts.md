@@ -39,3 +39,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 12
 > Pues lo primero que vamos a hacer es crear un sistema de carpetas que tiene que alojar una vista que sera para lista de usuarios y otro para ver un usuario en detalle
+
+## Prompt 13
+> la opcion a

@@ -24,6 +24,18 @@ ng test         # Unit tests (Vitest)
 ng generate component <name>   # Scaffold a component
 ```
 
+## Folder Structure
+
+```
+src/app/
+└── features/
+    └── users/
+        ├── user-list/    # /users — lista de usuarios
+        └── user-detail/  # /users/:id — detalle de un usuario
+```
+
+Routes use lazy loading via `loadComponent`. Default route redirects to `/users`.
+
 ## Repository
 
 - **Remote:** https://github.com/jbrenes95/prueba-2026
