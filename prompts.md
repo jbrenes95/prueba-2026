@@ -73,3 +73,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 ## Prompt 23
 > quiero que me poengas el input de buscar encima de la tabla y que ocupe el mismo ancho de la tabla
 > (corrección) Esta bien pero lo quiero fuera de la card
+
+## Prompt 24
+> Ahora quiero que creemos un interceptor para controlar los codigo de error que me manda el back y quiero que cuando venga un error me muestres un toast con un mensaje de error
