@@ -85,3 +85,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 27
 > La opcion a siempre cogeremos la opcion mas nativa
+
+## Prompt 28
+> Vamos a poner un boton toggle de angular material de seleccion unica que tenndra dos opciones español e ingles y en funcion de la que este seleccionada se cargara un idioma o otro
