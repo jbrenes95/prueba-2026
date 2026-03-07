@@ -12,6 +12,17 @@
       "EMAIL": "Email"
     }
   },
+  "USER_DETAIL": {
+    "NAME": "Name",
+    "SURNAME": "Surname",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "BACK": "Back",
+    "EDIT": "Edit",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "SAVE_SUCCESS": "User updated successfully"
+  },
   "ERROR": {
     "400": "The submitted data is not valid. Please review it and try again.",
     "401": "You must log in to access this section.",
