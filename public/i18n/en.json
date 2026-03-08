@@ -25,7 +25,8 @@
   },
   "VALIDATION": {
     "REQUIRED": "This field is required",
-    "EMAIL_INVALID": "Enter a valid email"
+    "EMAIL_INVALID": "Enter a valid email",
+    "PASSWORD_INVALID": "Password must contain at least one uppercase letter, one lowercase letter and one special character"
   },
   "ERROR": {
     "400": "The submitted data is not valid. Please review it and try again.",

@@ -17,6 +17,7 @@ export class UsersService {
 
   userDetail = signal<UserDetail | null>(null);
   loadingDetail = signal(false);
+  loadingUpdate = signal(false);
   userDetailError = signal(false);
 
   private http = inject(HttpClient);
@@ -63,6 +64,7 @@ export class UsersService {
   }
 
   updateUser(id: number, data: Partial<Pick<UserDetail, 'name' | 'surname' | 'email'>>): void {
+    this.loadingUpdate.set(true);
     this.http.put<UserDetailApi>(`${this.apiUrl}/${id}`, data).subscribe({
       next: (response) => {
         if (response) {
@@ -70,6 +72,10 @@ export class UsersService {
           this.users.update((list) => list.map((u) => (u.id === id ? { ...u, ...data } : u)));
           this.notification.success(this.translate.instant('USER_DETAIL.SAVE_SUCCESS'));
         }
+        this.loadingUpdate.set(false);
+      },
+      error: () => {
+        this.loadingUpdate.set(false);
       },
     });
   }

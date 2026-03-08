@@ -11,6 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { UsersService } from '../services/users.service';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PASSWORD_PATTERN = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).+$/;
 
 @Component({
   selector: 'app-user-detail',
@@ -40,7 +41,7 @@ export class UserDetail implements OnInit {
     name: [''],
     surname: [''],
     email: ['', [Validators.required, Validators.pattern(EMAIL_PATTERN)]],
-    password: ['', Validators.required],
+    password: ['', [Validators.required, Validators.pattern(PASSWORD_PATTERN)]],
   });
 
   constructor() {

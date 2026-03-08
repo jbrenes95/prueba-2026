@@ -29,7 +29,13 @@
           </div>
         }
 
-        @if (isEditing()) {
+        @if (usersService.loadingUpdate()) {
+          <div class="d-flex justify-content-center py-5">
+            <mat-spinner diameter="48" />
+          </div>
+        }
+
+        @if (isEditing() && !usersService.loadingUpdate()) {
           <form [formGroup]="editForm">
             <mat-form-field appearance="outline" class="w-100 mb-1">
               <mat-label>{{ 'USER_DETAIL.NAME' | translate }}</mat-label>
@@ -68,13 +74,15 @@
               </button>
               @if (editForm.controls.password.hasError('required')) {
                 <mat-error>{{ 'VALIDATION.REQUIRED' | translate }}</mat-error>
+              } @else if (editForm.controls.password.hasError('pattern')) {
+                <mat-error>{{ 'VALIDATION.PASSWORD_INVALID' | translate }}</mat-error>
               }
             </mat-form-field>
           </form>
         }
 
         <div class="actions">
-          @if (!isEditing()) {
+          @if (!isEditing() && !usersService.loadingUpdate()) {
             <button mat-stroked-button (click)="goBack()">
               <mat-icon>arrow_back</mat-icon>
               {{ 'USER_DETAIL.BACK' | translate }}
@@ -86,7 +94,7 @@
             </button>
           }
 
-          @if (isEditing()) {
+          @if (isEditing() && !usersService.loadingUpdate()) {
             <button mat-stroked-button (click)="cancelEdit()">
               {{ 'USER_DETAIL.CANCEL' | translate }}
             </button>

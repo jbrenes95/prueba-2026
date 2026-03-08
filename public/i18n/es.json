@@ -25,7 +25,8 @@
   },
   "VALIDATION": {
     "REQUIRED": "Este campo es obligatorio",
-    "EMAIL_INVALID": "Introduce un email válido"
+    "EMAIL_INVALID": "Introduce un email válido",
+    "PASSWORD_INVALID": "La contraseña debe tener al menos una mayúscula, una minúscula y un carácter especial"
   },
   "ERROR": {
     "400": "Los datos enviados no son correctos. Por favor, revísalos e inténtalo de nuevo.",
