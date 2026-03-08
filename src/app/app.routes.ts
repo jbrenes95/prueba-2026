@@ -4,12 +4,12 @@ export const routes: Routes = [
   {
     path: 'users',
     loadComponent: () =>
-      import('./features/users/user-list/user-list').then(m => m.UserList),
+      import('./pages/users/user-list/user-list').then(m => m.UserList),
   },
   {
     path: 'users/:id',
     loadComponent: () =>
-      import('./features/users/user-detail/user-detail').then(m => m.UserDetail),
+      import('./pages/users/user-detail/user-detail').then(m => m.UserDetail),
   },
   {
     path: '',

@@ -166,3 +166,12 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 54
 > Vamos a poner en el campo contraseña una validacion para que tenga minimo una minuscula, una mayuscula y un caracter especial
+
+## Prompt 55
+> Como paso final vamos a cambiar el sistema de carpetas porque no me convence, dime opciones
+
+## Prompt 56
+> creo que lo que hay en core no vamos a pasar a shared y las features son mas pages, no crees?
+
+## Prompt 57
+> core cambialo a shared

@@ -237,3 +237,9 @@ Para `UsersService` — `loadUsers()`: caché, éxito con mapeo, error con seña
 ## [54] Validación de contraseña
 **Usuario:** Añadir validación al campo contraseña: mínimo una minúscula, una mayúscula y un carácter especial.
 **Claude:** Añadido `PASSWORD_PATTERN = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).+$/` y `Validators.pattern(PASSWORD_PATTERN)` al campo password. Mensaje de error `@else if (pattern)` en el template. Clave `VALIDATION.PASSWORD_INVALID` añadida a `es.json` y `en.json`.
+
+---
+
+## [55-57] Reestructuración de carpetas
+**Usuario:** El sistema de carpetas no convence. Opciones propuestas. Decisión: `core/` → `shared/`, `features/` → `pages/`.
+**Claude:** Carpetas renombradas. Todos los imports actualizados en `app.ts`, `app.config.ts`, `app.routes.ts`, `users.service.ts` y `users.service.spec.ts`. Carpetas antiguas eliminadas. Estructura final: `src/app/shared/` + `src/app/pages/`.

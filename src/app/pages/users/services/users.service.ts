@@ -2,9 +2,9 @@ import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 import { environment } from '../../../../environments/environment';
-import { User, UserApi, UserDetail, UserDetailApi } from '../../../core/models/user.model';
-import { mapUser, mapUserDetail } from '../../../core/mappers/user.mapper';
-import { NotificationService } from '../../../core/services/notification.service';
+import { User, UserApi, UserDetail, UserDetailApi } from '../../../shared/models/user.model';
+import { mapUser, mapUserDetail } from '../../../shared/mappers/user.mapper';
+import { NotificationService } from '../../../shared/services/notification.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({ providedIn: 'root' })
