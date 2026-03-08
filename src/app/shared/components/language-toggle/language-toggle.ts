@@ -1,4 +1,6 @@
 import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map, startWith } from 'rxjs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,10 +13,14 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageToggle {
   private translate = inject(TranslateService);
 
-  currentLang = this.translate.currentLang || this.translate.defaultLang;
+  currentLang = toSignal(
+    this.translate.onLangChange.pipe(
+      map(e => e.lang),
+      startWith('es'),
+    ),
+  );
 
   setLanguage(lang: string): void {
-    this.currentLang = lang;
     this.translate.use(lang);
   }
 }
