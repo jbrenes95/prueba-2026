@@ -225,3 +225,15 @@ Para `UsersService` — `loadUsers()`: caché, éxito con mapeo, error con seña
 ## [52] Log de chat
 **Usuario:** Saca un archivo de log de todo el chat con prompts y respuestas, simple y de lectura fácil.
 **Claude:** Generado este archivo `chat-log.md`.
+
+---
+
+## [53] Spinner durante la edición
+**Usuario:** Cuando se edita un usuario, lanzar el spinner hasta que el back devuelva respuesta y se actualicen los datos visualmente.
+**Claude:** Añadida signal `loadingUpdate = signal(false)` al servicio. Se activa a `true` antes del PUT y vuelve a `false` en éxito y en error. En el template, mientras `loadingUpdate()` es `true` se muestra el spinner y desaparecen el formulario y los botones de acción.
+
+---
+
+## [54] Validación de contraseña
+**Usuario:** Añadir validación al campo contraseña: mínimo una minúscula, una mayúscula y un carácter especial.
+**Claude:** Añadido `PASSWORD_PATTERN = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).+$/` y `Validators.pattern(PASSWORD_PATTERN)` al campo password. Mensaje de error `@else if (pattern)` en el template. Clave `VALIDATION.PASSWORD_INVALID` añadida a `es.json` y `en.json`.
