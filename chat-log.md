@@ -243,3 +243,9 @@ Para `UsersService` — `loadUsers()`: caché, éxito con mapeo, error con seña
 ## [55-57] Reestructuración de carpetas
 **Usuario:** El sistema de carpetas no convence. Opciones propuestas. Decisión: `core/` → `shared/`, `features/` → `pages/`.
 **Claude:** Carpetas renombradas. Todos los imports actualizados en `app.ts`, `app.config.ts`, `app.routes.ts`, `users.service.ts` y `users.service.spec.ts`. Carpetas antiguas eliminadas. Estructura final: `src/app/shared/` + `src/app/pages/`.
+
+---
+
+## [58] Actualización de archivos de seguimiento
+**Usuario:** Actualiza el archivo de prompts y el de chat-log.
+**Claude:** Añadido prompt 58 a `prompts.md` y esta entrada a `chat-log.md`.

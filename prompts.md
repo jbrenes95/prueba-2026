@@ -175,3 +175,6 @@ Registro de todos los prompts enviados durante el desarrollo de la prueba técni
 
 ## Prompt 57
 > core cambialo a shared
+
+## Prompt 58
+> actualizame el archivo de prompts y el de chat-log
